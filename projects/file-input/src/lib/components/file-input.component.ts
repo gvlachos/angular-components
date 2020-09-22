@@ -25,7 +25,7 @@ export class FileInputComponent implements OnInit {
   }
 
   clear = (): void => {
-    // this.selectedFile = null;
+    this.selectedFile = null;
     this.progress = 0;
   }
 
@@ -41,12 +41,6 @@ export class FileInputComponent implements OnInit {
     this.fileInputService.upload(this.selectedFile).subscribe(
       event => {
         this.progress = 100;
-        // if (event.type === HttpEventType.UploadProgress) {
-        //   this.progress = Math.round(100 * event.loaded / event.total);
-        // } else if (event instanceof HttpResponse) {
-        //   this.message = event.body.message;
-        //   this.fileInfos = this.fileInputService.getFiles();
-        // }
         this.selectedFile = null;
       },
       err => {
