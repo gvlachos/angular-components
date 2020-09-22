@@ -1,0 +1,57 @@
+.file-upload {
+  $buttonWidth: 9em;
+  $buttonHeight: 2.4em;
+  $paddingLeft: 0.5em;
+  width: 60vw;
+  margin: 0 auto;
+  .file-form-field {
+    width: 100%;
+  }
+  .file-input-container {
+    .label {
+      display: block;
+      padding-bottom: 0.2em;
+      margin: 0.5em 0 0;
+    }
+    .file-input-wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-bottom: 0.5em;
+      padding: 0;
+      .input {
+        margin-right: 10px;
+      }
+      .button {
+        width: $buttonWidth;
+        height: $buttonHeight;
+        padding: 0;
+        &.upload {
+          margin-left: 5px;
+        }
+        .title {
+          display: inline-block;
+          height: $buttonHeight;
+          font-size: 1.2em;
+        }
+        .icon {
+          font-size: 1.6em;
+        }
+      }
+      .input {
+        display: flex;
+        align-items: center;
+        width: calc(100% - #{ $buttonWidth } - #{ $paddingLeft });
+        padding-left: $paddingLeft;
+        white-space: nowrap;
+      }
+    }
+  }
+  .message-upload-complete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text {
+      margin-left: 5px;
+    }
+  }
+}
